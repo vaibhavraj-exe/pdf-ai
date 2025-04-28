@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  fastapi-app:
+    image: vaibhavrajexe/fastapi-app:latest
+    ports:
+      - "80:8000"
+    environment:
+      GEMINI_API_KEY: AIzaSyB7EwobfAZ5lbc7vWbnWU76BMVedDBJpKs
