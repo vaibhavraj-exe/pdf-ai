@@ -9,10 +9,14 @@ import os
 import google.generativeai as genai  # Gemini API
 from dotenv import load_dotenv
 import re
+from prometheus_fastapi_instrumentator import Instrumentator
+
+
 
 load_dotenv()
 
 app = FastAPI()
+instrumentator = Instrumentator().instrument(app).expose(app)
 
 # CORS middleware
 app.add_middleware(
